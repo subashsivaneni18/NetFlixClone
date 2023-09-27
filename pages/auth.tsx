@@ -6,15 +6,14 @@ import {signIn} from 'next-auth/react'
 import {FcGoogle} from 'react-icons/fc'
 import {FaGithub} from 'react-icons/fa'
 
-  const [email, setEmail] = useState("");
-  const [name, setName] = useState("");
-  const [password, setPassword] = useState("");
-
-  const [variant, setVariant] = useState<"Login" | "Register">("Login");
-
 
 const auth = () => {
 
+    const [email,setEmail] = useState('')
+    const [name,setName] = useState('')
+    const [password,setPassword] = useState('')
+
+    const [variant,setVariant] = useState<"Login" | "Register">('Login')
 
     const onToggle = useCallback(()=>{
         setVariant((e)=>e==='Login'?'Register':'Login')
